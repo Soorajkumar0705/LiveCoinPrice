@@ -16,8 +16,7 @@ struct CryptoListView {
         let apiService = APIServiceFactory.make(
             decoder: JSONDecoder()
         )
-        _viewModel = StateObject(wrappedValue: CryptoListViewModel(apiService: apiService)
-        )
+        _viewModel = StateObject(wrappedValue: CryptoListViewModel(apiService: apiService))
         
     }
     
@@ -32,11 +31,16 @@ extension CryptoListView : View{
                
                 List(viewModel.coins, rowContent: { coin in
                     CryptoListViewItem(coin: coin)
+                        .onAppear {
+                            if coin == viewModel.coins.last {
+                                viewModel.currentPage += 1
+                            }
+                        }
                 })
                 
             }
         }
-        .task({
+        .task(id: viewModel.currentPage, {
             viewModel.loadCoinData()
         })
     }

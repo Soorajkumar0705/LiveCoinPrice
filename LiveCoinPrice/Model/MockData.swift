@@ -11,7 +11,7 @@ class MockData {
     
     static let mockCoins: [Coin] = [
         Coin(
-            id: "bitcoin",
+            coinId: "bitcoin",
             symbol: "btc",
             name: "Bitcoin",
             image: "https://coin-images.coingecko.com/coins/images/1/large/bitcoin.png",
@@ -23,7 +23,7 @@ class MockData {
             low24H: 89736
         ),
         Coin(
-            id: "ethereum",
+            coinId: "ethereum",
             symbol: "eth",
             name: "Ethereum",
             image: "https://coin-images.coingecko.com/coins/images/279/large/ethereum.png",
@@ -35,7 +35,7 @@ class MockData {
             low24H: 3093.48
         ),
         Coin(
-            id: "tether",
+            coinId: "tether",
             symbol: "usdt",
             name: "Tether",
             image: "https://coin-images.coingecko.com/coins/images/325/large/Tether.png",
@@ -47,7 +47,7 @@ class MockData {
             low24H: 0.99
         ),
         Coin(
-            id: "binancecoin",
+            coinId: "binancecoin",
             symbol: "bnb",
             name: "BNB",
             image: "https://coin-images.coingecko.com/coins/images/825/large/binance-coin-logo.png",
@@ -59,7 +59,7 @@ class MockData {
             low24H: 580.32
         ),
         Coin(
-            id: "solana",
+            coinId: "solana",
             symbol: "sol",
             name: "Solana",
             image: "https://coin-images.coingecko.com/coins/images/4128/large/solana.png",
@@ -71,7 +71,7 @@ class MockData {
             low24H: 170.11
         ),
         Coin(
-            id: "ripple",
+            coinId: "ripple",
             symbol: "xrp",
             name: "XRP",
             image: "https://coin-images.coingecko.com/coins/images/44/large/xrp.png",
@@ -83,7 +83,7 @@ class MockData {
             low24H: 0.60
         ),
         Coin(
-            id: "cardano",
+            coinId: "cardano",
             symbol: "ada",
             name: "Cardano",
             image: "https://coin-images.coingecko.com/coins/images/975/large/cardano.png",
@@ -95,7 +95,7 @@ class MockData {
             low24H: 1.17
         ),
         Coin(
-            id: "dogecoin",
+            coinId: "dogecoin",
             symbol: "doge",
             name: "Dogecoin",
             image: "https://coin-images.coingecko.com/coins/images/5/large/dogecoin.png",
@@ -107,7 +107,7 @@ class MockData {
             low24H: 0.17
         ),
         Coin(
-            id: "tron",
+            coinId: "tron",
             symbol: "trx",
             name: "TRON",
             image: "https://coin-images.coingecko.com/coins/images/1094/large/tron.png",
@@ -119,7 +119,7 @@ class MockData {
             low24H: 0.13
         ),
         Coin(
-            id: "chainlink",
+            coinId: "chainlink",
             symbol: "link",
             name: "Chainlink",
             image: "https://coin-images.coingecko.com/coins/images/877/large/chainlink-new-logo.png",

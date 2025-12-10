@@ -16,6 +16,9 @@ class CryptoListViewModel : ObservableObject{
     let apiService : APIService
     var disposeBag : Set<AnyCancellable>
     
+    var perPage : Int = 10
+    @Published var currentPage : Int = 1
+    
     init(
         apiService: APIService
     ) {
@@ -25,16 +28,20 @@ class CryptoListViewModel : ObservableObject{
     
     func loadCoinData() {
         let future = apiService.loadData(
-            urlString: URLConstant.getCoinURL(perPage: 10, page: 1),
+            urlString: URLConstant.getCoinURL(
+                perPage: perPage,
+                page: currentPage
+            ),
             responseType: [Coin].self)
         
-        future.sink(
-            receiveCompletion: { completion in
+        future
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
                 print("API call completed : \(completion)")
-            },
-            receiveValue: { value in
+                
+            }, receiveValue: { value in
                 print("coins : \(value)")
-                self.coins = value
+                self.coins.append(contentsOf: value)
             }
         )
         .store(in: &disposeBag)

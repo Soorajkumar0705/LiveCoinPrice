@@ -41,8 +41,8 @@ class APIService {
                     guard let httpResponse = response as? HTTPURLResponse,
                           200...300 ~= httpResponse.statusCode
                     else {
+                        print("Error in network call. :\(response)")
                         promise(.failure(APIError.networkError))
-                        
                         throw APIError.networkError
                     }
                     
