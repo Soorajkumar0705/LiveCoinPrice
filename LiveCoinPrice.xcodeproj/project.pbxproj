@@ -15,6 +15,9 @@
 		B0C3DF002EE879E0006F3BD4 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C3DEFF2EE879E0006F3BD4 /* MockData.swift */; };
 		B0C3DF022EE87CF8006F3BD4 /* CryptoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C3DF012EE87CF8006F3BD4 /* CryptoListViewModel.swift */; };
 		B0C3DF042EE87D30006F3BD4 /* CryptoListViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C3DF032EE87D30006F3BD4 /* CryptoListViewItem.swift */; };
+		B0DFB4F92EE9C11E002EBA4D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DFB4F82EE9C11E002EBA4D /* APIService.swift */; };
+		B0DFB4FB2EE9C2EA002EBA4D /* URLConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DFB4FA2EE9C2EA002EBA4D /* URLConstant.swift */; };
+		B0DFB5012EE9C9D4002EBA4D /* APIServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DFB5002EE9C9D4002EBA4D /* APIServiceType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		B0C3DF012EE87CF8006F3BD4 /* CryptoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListViewModel.swift; sourceTree = "<group>"; };
 		B0C3DF032EE87D30006F3BD4 /* CryptoListViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListViewItem.swift; sourceTree = "<group>"; };
 		B0DFB4F72EE9B726002EBA4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B0DFB4F82EE9C11E002EBA4D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		B0DFB4FA2EE9C2EA002EBA4D /* URLConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstant.swift; sourceTree = "<group>"; };
+		B0DFB5002EE9C9D4002EBA4D /* APIServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -122,15 +128,50 @@
 				B0DFB4F72EE9B726002EBA4D /* Info.plist */,
 				B0C3DEF62EE876CC006F3BD4 /* LiveCoinPrice.entitlements */,
 				B0C3DEF72EE876CC006F3BD4 /* LiveCoinPriceApp.swift */,
-				B0C3DEF52EE876CC006F3BD4 /* CryptoListView.swift */,
-				B0C3DF032EE87D30006F3BD4 /* CryptoListViewItem.swift */,
-				B0C3DF012EE87CF8006F3BD4 /* CryptoListViewModel.swift */,
-				B0C3DEFD2EE8785A006F3BD4 /* Coin.swift */,
-				B0C3DEFF2EE879E0006F3BD4 /* MockData.swift */,
+				B0DFB4FC2EE9C885002EBA4D /* View */,
+				B0DFB4FD2EE9C8A0002EBA4D /* VM */,
+				B0DFB4FE2EE9C8AB002EBA4D /* Model */,
+				B0DFB4FF2EE9C8C0002EBA4D /* APIService */,
 				B0C3DEF42EE876CC006F3BD4 /* Assets.xcassets */,
 				B0C3DEF32EE876CC006F3BD4 /* Preview Content */,
 			);
 			path = LiveCoinPrice;
+			sourceTree = "<group>";
+		};
+		B0DFB4FC2EE9C885002EBA4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B0C3DEF52EE876CC006F3BD4 /* CryptoListView.swift */,
+				B0C3DF032EE87D30006F3BD4 /* CryptoListViewItem.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B0DFB4FD2EE9C8A0002EBA4D /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				B0C3DF012EE87CF8006F3BD4 /* CryptoListViewModel.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		B0DFB4FE2EE9C8AB002EBA4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B0C3DEFD2EE8785A006F3BD4 /* Coin.swift */,
+				B0C3DEFF2EE879E0006F3BD4 /* MockData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B0DFB4FF2EE9C8C0002EBA4D /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				B0DFB4FA2EE9C2EA002EBA4D /* URLConstant.swift */,
+				B0DFB5002EE9C9D4002EBA4D /* APIServiceType.swift */,
+				B0DFB4F82EE9C11E002EBA4D /* APIService.swift */,
+			);
+			path = APIService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,8 +318,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0C3DF042EE87D30006F3BD4 /* CryptoListViewItem.swift in Sources */,
+				B0DFB4FB2EE9C2EA002EBA4D /* URLConstant.swift in Sources */,
+				B0DFB4F92EE9C11E002EBA4D /* APIService.swift in Sources */,
 				B0C3DF022EE87CF8006F3BD4 /* CryptoListViewModel.swift in Sources */,
 				B0C3DEFE2EE8785A006F3BD4 /* Coin.swift in Sources */,
+				B0DFB5012EE9C9D4002EBA4D /* APIServiceType.swift in Sources */,
 				B0C3DF002EE879E0006F3BD4 /* MockData.swift in Sources */,
 				B0C3DEF92EE876CC006F3BD4 /* CryptoListView.swift in Sources */,
 				B0C3DEFA2EE876CC006F3BD4 /* LiveCoinPriceApp.swift in Sources */,
@@ -442,6 +486,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LiveCoinPrice/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -481,6 +526,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LiveCoinPrice/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
